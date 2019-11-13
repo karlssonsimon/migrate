@@ -1,4 +1,4 @@
-module migrate
+module github.com/karlssonsimon/migrate
 
 go 1.12
 
