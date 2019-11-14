@@ -9,6 +9,9 @@ jobs:
 
     steps:
 
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v1
+
     - name: Start postgres
       run: docker-compose up -d
       
@@ -17,9 +20,6 @@ jobs:
       with:
         go-version: 1.13
       id: go
-
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v1
       
     - name: Run tests
       run: go test
